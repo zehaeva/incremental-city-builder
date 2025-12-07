@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm3h13geca4tn"]
+
+[ext_resource type="Texture2D" uid="uid://c1ms4lpjia8kq" path="res://assets/iso_tileset.png" id="1_uyjjk"]
+[ext_resource type="Script" uid="uid://kb1r1hcmwekn" path="res://tile_map_layer.gd" id="2_067cy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jka67"]
+texture = ExtResource("1_uyjjk")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -8)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -8)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, -8)
+
+[sub_resource type="TileSet" id="TileSet_i5arm"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_jka67")
+
+[node name="Layer01" type="TileMapLayer"]
+tile_set = SubResource("TileSet_i5arm")
+script = ExtResource("2_067cy")

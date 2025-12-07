@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbpkt3lkox3ni"]
+[gd_scene load_steps=3 format=4 uid="uid://bbpkt3lkox3ni"]
 
-[ext_resource type="PackedScene" uid="uid://cfdoie3xcjmsj" path="res://assets/Pieces/box.fbx" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://cm3h13geca4tn" path="res://assets/layer_01.tscn" id="1_a202f"]
 
-[sub_resource type="Environment" id="Environment_a202f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a202f"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node2D"]
 
-[node name="box" parent="." instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.982751, 0, -1.0107207)
+[node name="Layer01" parent="." instance=ExtResource("1_a202f")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAEAAAADAAAAAAABAAEAAAADAAAAAAACAAIAAAADAAAAAAABAAIAAAADAAAAAAAAAAIAAAADAAAAAAACAAEAAAADAAAAAAACAAAAAAADAAAAAAD//wAAAAADAAAAAAD//wEAAAADAAAAAAD//wIAAAADAAAAAAA=")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.15466607, 0.5416164, 0.8262749, 0.14492384, -0.8397294, 0.5233083, 0.97727966, 0.038808886, -0.20837077, 5.367844, 5.930012, -1.0799285)
-environment = SubResource("Environment_a202f")
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Layer02" parent="." instance=ExtResource("1_a202f")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAEAAAADAAAAAAABAAEAAAADAAAAAAACAAIAAAADAAAAAAABAAIAAAADAAAAAAAAAAIAAAADAAAAAAACAAEAAAADAAAAAAACAAAAAAADAAAAAAD//wAAAAADAAAAAAD//wEAAAADAAAAAAD//wIAAAADAAAAAAA=")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_a202f")
