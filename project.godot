@@ -13,7 +13,7 @@ config_version=5
 config/name="IncrementalCityBuilder"
 run/main_scene="uid://bbpkt3lkox3ni"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://do0iyqbg6bkku"
 
 [dotnet]
 
